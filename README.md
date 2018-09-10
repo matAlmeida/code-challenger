@@ -1,4 +1,4 @@
-# Code Challenges by ``Matheus Almeida`
+# Code Challenges by `Matheus Almeida`
 
 ## Some code challenges from diferents platforms
 
