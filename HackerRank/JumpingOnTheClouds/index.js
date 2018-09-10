@@ -26,7 +26,25 @@ function readLine() {
 
 // Complete the jumpingOnClouds function below.
 function jumpingOnClouds(c) {
-
+    let currentPosition = 0;
+    
+    const jumps = c.reduce((agg, cloud, index, array) => {
+        if(index == currentPosition) {
+            if (array[currentPosition + 2] === 0) {
+                currentPosition += 2;
+                agg += 1;
+                return agg;
+            } else if (array[currentPosition + 1] === 0) {
+                currentPosition += 1;
+                agg += 1;
+                return agg;
+            }
+        }
+        
+        return agg;
+    }, 0)
+    
+    return jumps;
 
 }
 
