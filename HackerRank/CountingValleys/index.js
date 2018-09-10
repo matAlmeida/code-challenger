@@ -26,8 +26,21 @@ function readLine() {
 
 // Complete the countingValleys function below.
 function countingValleys(n, s) {
-
-
+    const stepsArray = s.split('');
+        let level = 0;
+        let valleys = 0;
+        
+        stepsArray.map((step) => {
+            if (step === 'U'){
+                level += 1;
+            } else if (step === 'D'){
+                level -= 1;
+            }
+            
+            if (level === 0 && step === 'U') valleys += 1;
+        })
+        
+        return valleys;
 }
 
 function main() {
