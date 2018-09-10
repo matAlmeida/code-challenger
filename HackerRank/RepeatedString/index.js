@@ -26,7 +26,24 @@ function readLine() {
 
 // Complete the repeatedString function below.
 function repeatedString(s, n) {
-
+    let lettersA = 0;
+    const aInS = s.split('').reduce((agg, item) => {
+        if ( item === 'a' ) {
+            agg += 1;
+        }
+        return agg;
+    }, 0)
+    
+    const sTimes = (Math.floor(n / s.length));
+    lettersA += (sTimes * aInS);
+    
+    const remainingLetters = n - (sTimes * s.length);
+    
+    for (let i = 0; i < remainingLetters; i++) {
+        if(s[i] === 'a') lettersA += 1;
+    }
+    
+    return lettersA;
 
 }
 
